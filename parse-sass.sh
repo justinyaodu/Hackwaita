@@ -9,7 +9,7 @@ SASSC_OPT="-M -t compact"
 
 echo Generating the css...
 
-script_dir="$(dirname "${0}")"
+repo_root="$(dirname "${0}")"
 
-sassc $SASSC_OPT gtk-contained.scss "${script_dir}/gtk-3.0/gtk.css"
-sassc $SASSC_OPT gtk-contained-dark.scss "${script_dir}/gtk-3.0/gtk-dark.css"
+sassc $SASSC_OPT "${repo_root}/gtk-contained.scss" "${repo_root}/gtk-3.0/gtk.css"
+sassc $SASSC_OPT "${repo_root}/gtk-contained-dark.scss" "${repo_root}/gtk-3.0/gtk-dark.css"
